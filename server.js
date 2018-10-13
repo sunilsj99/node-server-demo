@@ -48,6 +48,13 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pagePara: "Welcome to projects page !!",
+    pageLink: "https://github.com/sunilsj99?tab=repositories"
+  })
+})
+
 app.get("/bad", (req, res) => {
   res.send({
     errorMessage: "error in loading"
